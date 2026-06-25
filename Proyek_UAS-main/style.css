@@ -1,0 +1,488 @@
+html{
+    scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@keyframes zoomMulus{
+    from{
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}   
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+.navbar{
+    background-color: #1C2B38;
+    color: white;
+    padding: 15px 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .navbar-logo h1{
+    font-size: 35px;
+    color: #89eda2;
+}
+.navbar .navbar-logo .tec{
+    color: rgb(255, 221, 1);
+}
+.navbar ul{
+    list-style: none;
+    gap: 25px;
+    display: flex;
+}
+.navbar ul li{
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #f3ee90;
+    transition: 0.3s ease;
+}
+.navbar ul li a::before{
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 5px;
+    background-color: rgb(153, 255, 0);
+    transition: 0.3s ease;
+}
+.navbar ul li a:hover{
+    color: rgb(153, 255, 0);
+}
+.home{
+    min-height: 100vh;
+    display: flex;;
+    align-items:center;
+    background-image: url('baru.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 190%;
+    justify-content: center;
+}
+.home .isi{
+    font-family: arial, sans-serif;
+    padding: 1.4rem 7%;
+    max-width: 50rem;
+    border: 0;
+    border-radius: 10px;
+    background: #557b8180;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur (8px);
+    border: 1px solid rgba(22, 24, 103, 0.2);
+    border-radius: 10px;
+    animation: zoomMulus 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    text-align: center;
+}
+.isi a{
+    text-decoration: none;
+}
+.isi h1{
+    margin-top: 1rem;
+    font-size: 45px;
+    color: #f3ee90;
+    text-shadow: 2.5px 2.5px 4px rgba(254, 195, 0, 0.783);
+    text-align: center;
+}
+.isi p{
+    width: 70%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    font-size: 18px;
+    color: #ffffff;
+    padding:0;
+    text-align: center;
+    justify-content: center;
+    margin: 1rem auto;
+    
+}
+.isi .btn-go{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(28, 62, 72);
+    border-radius: 0.2rem;
+} 
+#menu-pilihan{
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #1C2B38;
+    color: rgb(3, 3, 3);
+}
+#menu-pilihan h2{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+.menu-container{
+    display:flex;justify-content:center;
+    gap: 30px;flex-wrap: wrap;
+    max-width: 1100px;
+    margin:auto;
+}
+#menu-pilihan .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 150px;
+    background:rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.9);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#menu-pilihan .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+    border : 1px solid rgba(255, 255, 255, 0.4);
+}
+#menu-pilihan .card h3{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: rgb(1, 1, 1);
+}
+#menu-pilihan .card p{
+    font-size: 0.95rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+#menu-pilihan .card .cta{
+    text-decoration: none;
+}
+#menu-pilihan .card button {
+    background-color: rgb(28, 62, 72);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 30px;
+}
+#menu-pilihan .card button:hover{
+    background-color: #448dac;
+    color: rgb(255, 255, 255);
+}
+
+/* ========== HALAMAN GUNUNG (MOUNTAIN PAGE) ========== */
+.camping-page{
+    background-color: #e4e19a;
+}
+.page-header{
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    color: rgb(32, 148, 144);
+}
+.page-header h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgb(129, 113, 7);
+    color: #49331c;
+}
+.page-header p{
+    font-size: 1.1rem;
+    color: rgb(92, 90, 28);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.mountain-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    box-sizing: border-box;
+}
+.mountain-section{
+    width: 100%;
+    max-width: 500px;
+    background: #49331c;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.section-title{
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.section-subtitle{
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #cbd5e0;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+.section-title{
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: #fbfb40;
+}
+.section-subtitle{
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+.checklist-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: #4FD1C5;
+}
+.checklist-card{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    
+}
+.checklist-card:hover{
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+.checklist-card h3{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #95e533;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding-bottom: 5px;
+}
+.checklist-list{
+    list-style: none;
+    padding: 0;
+    margin: 5px;
+}
+.checklist-list li{
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 12px 0;
+    color: #ffffff;
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+.checklist-list input[type="checkbox"]:checked+label{
+    text-decoration: line-through;
+    color: #0a0b0d;
+    transition: all 0.3 ease;
+}
+.checklist-list input[type="checkbox"], .checklist-list label{
+    cursor: pointer;
+}
+
+/* ========== HALAMAN PANTAI (BEACH PAGE ========= */
+.beach-page {
+    background-color: #e4e19a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.page-head{
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    color: rgb(32, 148, 144);
+}
+.page-head h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgb(19, 56, 54);
+    color: #34e3d5;
+}
+.page-head p{
+    font-size: 1.1rem;
+    color: rgb(92, 90, 28);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.beach-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    max-height: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #13353a;
+    border-radius: 20px;
+}
+.beach-page .check-card h3 {
+    color: #95e533;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.784);
+    padding-bottom: 15px;
+}
+.check-card{
+    background: rgba(28, 156, 141, 0.274);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 0 5px #13353a;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.check-card:hover{
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+.check-card h3{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #99d1cb;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding-bottom: 5px;
+}
+.check-list{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+.check-list li{
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.2re;
+    gap: 12px;
+    margin: 14px 0;
+    color: #E2E8F0;
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+.check-list input[type="checkbox"]:checked+label{
+    text-decoration: line-through;
+    color: #ffffff;
+    transition: all 0.3 ease;
+}
+.check-list input[type="checkbox"], .checklist-list label{
+    cursor: pointer;
+}
+
+/* =========== HALAMAN TRAVEL / MUDIK ============ */
+.travel-page {
+    background: linear-gradient(135px, #111827 0%, #312e81 100%);
+    background-color: #e4e19a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.page-heade{
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    color: rgb(32, 148, 144);
+}
+.page-heade h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgb(255, 84, 84);
+    color: #7c1f1f;
+}
+.page-heade p{
+    font-size: 1.1rem;
+    color: rgb(96, 34, 34);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.travel-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #7c1f1f;
+}
+.chelist-card{
+    background: rgba(210, 134, 125, 0.274);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 3px solid rgba(150, 45, 45, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 0 5px #531411;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.chelist-card:hover{
+    transform: translateY(-3px);
+    border-color: rgba(189, 189, 189, 0.3);
+}
+.chelist-card h3{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.537);
+    padding-bottom: 5px;
+}
+.checklist-b{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+.checklist-b li{
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.2re;
+    gap: 12px;
+    margin: 14px 0;
+    color: #E2E8F0;
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+.checklist-b input[type="checkbox"]:checked+label{
+    text-decoration: line-through;
+    color: #060606;
+    transition: all 0.3 ease;
+}
+.checklist-b input[type="checkbox"], .checklist-list label{
+    cursor: pointer;
+}
